@@ -40,14 +40,20 @@ body {
     background-color: #F4F6F8;
 }
 
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}    
+    
 header {
     border-bottom: 1px solid rgba(255,255,255,0.05);
     background-color: rgba(11,31,59,0.95);
     backdrop-filter: blur(6px);
     padding: 18px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -306,24 +312,26 @@ footer {
 <body>
 
 <header>
-    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+   <div class="header-inner">
+
     <a href="/" class="logo">
-    <img src="logo-light.png" alt="AVT Digital Security" height="42">
-    <span class="logo-text">AVT Digital Security</span>
+      <img src="logo-light.png" alt="AVT Digital Security" height="42">
+      <span class="logo-text">AVT Digital Security</span>
     </a>
-    
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </div>
 
     <nav id="nav-menu">
-    <a href="#">Solutions</a>
-    <a href="#">Training</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="/es/" class="lang-switch">ES</a>
+      <a href="#">Solutions</a>
+      <a href="#">Training</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="/es/" class="lang-switch">ES</a>
     </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
     </div>
+
+  </div>
 </header>
 
 <section class="hero">
