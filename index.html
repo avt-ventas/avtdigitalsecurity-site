@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,6 +126,7 @@ nav a:hover {
     font-weight: 400;
     max-width: 680px;
     line-height: 1.8;
+    opacity: 0.92;
 }
 
 .section p + p,
@@ -138,7 +139,7 @@ nav a:hover {
     font-size: 30px;
     margin-bottom: 32px;
     font-weight: 600;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.4px;
 }
 
 .section p,
@@ -332,6 +333,7 @@ footer {
 </section>
 
 <section class="cta" id="contact">
+    <div style="max-width:1200px; margin:0 auto;">
     <h2>Request a Technical Consultation</h2>
     <p>
         Discuss your operational requirements with our specialists and explore tailored forensic technology solutions for your institution.
@@ -339,8 +341,11 @@ footer {
     <p>
         Contact: <a href="mailto:ventas@avtdigitalsecurity.com">ventas@avtdigitalsecurity.com</a>
     </p>
+    </div>
 </section>
 
+<div style="height:1px; background:#E0E4E8;"></div>
+    
 <footer>
     <div style="max-width:1200px;">
         <strong style="color:#E6EDF5;">AVT Digital Security</strong><br>
@@ -354,6 +359,11 @@ footer {
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }
+document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById("nav-menu").classList.remove("active");
+    });
+});
 </script>    
     
 </body>
