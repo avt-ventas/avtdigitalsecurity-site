@@ -25,7 +25,7 @@ html {
 
 .credibility {
     background: #E9EEF3;
-    padding: 35px 10%;
+    padding: 35px 0;
     font-size: 13px;
     letter-spacing: 1.5px;
     color: #3A4A5F;
@@ -40,14 +40,24 @@ body {
     background-color: #F4F6F8;
 }
 
-.header-inner {
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 6%;
+}
+
+.hero-accent {
+    width: 100px;
+    height: 3px;
+    background-color: #2F5D8A;
+    margin-top: 50px;
+}
+
+.header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-}    
+}
     
 header {
     border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -122,28 +132,18 @@ nav a:focus,
                 url('background.jpg') center/cover no-repeat;
     color: white;
     box-shadow: inset 0 -40px 60px rgba(0,0,0,0.25);
-    padding: 150px 10% 130px 10%;
+    padding: 150px 0 130px 0;
     text-align: left;
     position: relative;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    width: 120px;
-    height: 3px;
-    background-color: #2F5D8A;
-}
-
 .hero h1 {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 700;
     margin-bottom: 25px;
     max-width: 720px;
     line-height: 1.25;
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
 }
 
 .hero p {
@@ -154,6 +154,10 @@ nav a:focus,
     opacity: 0.92;
 }
 
+.section:nth-of-type(even) {
+    background-color: #FAFBFC;
+}
+
 .section p + p,
 .cta p + p {
     margin-top: 18px;
@@ -161,15 +165,16 @@ nav a:focus,
     
 .section h2,
 .cta h2 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 32px;
     font-weight: 600;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.6px;
 }
 
 .section p,
 .cta p {
     font-size: 17px;
+    color: #2A2A2A;
     line-height: 1.8;
     max-width: 850px;
 }
@@ -177,7 +182,7 @@ nav a:focus,
 footer {
     background-color: #0B1F3B;
     color: #AEB7C2;
-    padding: 30px 10%;
+    padding: 30px 0;
     font-size: 14px;
 }
 .buttons {
@@ -214,14 +219,14 @@ footer {
 }
     
 .section {
-    padding: 90px 10%;
+    padding: 90px 0;
     scroll-margin-top: 100px;
     background-color: #ffffff;
     border-bottom: 1px solid #EEF2F6;
 }
 
 .cta {
-    padding: 90px 10%;
+    padding: 90px 0;
     background-color: #F4F6F8;
 }
 
@@ -245,7 +250,7 @@ footer {
 @media (max-width: 900px) {
 
     header {
-        padding: 18px 6%;
+        padding: 18px 0;
     }
 
     nav {
@@ -273,8 +278,12 @@ footer {
         display: block;
     }
 
+    .container {
+        padding: 0 6%;
+    }
+    
     .hero {
-        padding: 80px 6%;
+        padding: 80px 0;
     }
 
     .hero h1 {
@@ -299,11 +308,11 @@ footer {
 
     .section,
     .cta {
-        padding: 60px 6%;
+        padding: 60px 0;
     }
 
     footer {
-        padding: 25px 6%;
+        padding: 25px 0;
     }
 }    
 </style>
@@ -312,7 +321,7 @@ footer {
 <body>
 
 <header>
-   <div class="header-inner">
+   <div class="container header-inner">
 
     <a href="/" class="logo">
       <img src="logo-light.png" alt="AVT Digital Security" height="42">
@@ -335,23 +344,29 @@ footer {
 </header>
 
 <section class="hero">
-    <h1>High-Precision Digital Forensic Technologies</h1>
-    <p>
-        Advanced solutions for audio authentication, video analysis, and digital investigations — combined with professional training and expert advisory services for governmental and law enforcement agencies.
-    </p>
+    <div class="container">
+        <h1>High-Precision Digital Forensic Technologies</h1>
+        <p>
+            Advanced solutions for audio authentication, video analysis, and digital investigations — combined with professional training and expert advisory services for governmental and law enforcement agencies.
+        </p>
 
-    <div class="buttons">
-        <a href="#contact" class="btn-primary">Request Consultation</a>
-        <a href="#" class="btn-secondary">Explore Solutions</a>
+        <div class="buttons">
+            <a href="#contact" class="btn-primary">Request Consultation</a>
+            <a href="#" class="btn-secondary">Explore Solutions</a>
+        </div>
+
+        <div class="hero-accent"></div>
     </div>
 </section>
 
 <section class="credibility">
+  <div class="container">
     SUPPORTING GOVERNMENT INSTITUTIONS • LAW ENFORCEMENT • JUDICIAL AUTHORITIES • INTERNATIONAL PARTNERS
-</section>    
+  </div>
+</section>  
     
 <section class="section">
-    <div style="max-width:1200px; margin:0 auto;">
+    <div class="container">
     <h2>Trusted Forensic Technology Partner in LATAM</h2>
     <p>
         AVT Digital Security supports governmental institutions and law enforcement agencies across Latin America and international markets with advanced forensic technologies, specialized training, and expert advisory services.
@@ -363,7 +378,7 @@ footer {
 </section>
 
 <section class="cta" id="contact">
-    <div style="max-width:1200px; margin:0 auto;">
+    <div class="container">
     <h2>Request a Technical Consultation</h2>
     <p>
         Discuss your operational requirements with our specialists and explore tailored forensic technology solutions for your institution.
@@ -377,7 +392,7 @@ footer {
 <div style="height:1px; background:#E0E4E8;"></div>
     
 <footer>
-    <div style="max-width:1200px; margin:0 auto;">
+    <div class="container">
         <strong style="color:#E6EDF5;">AVT Digital Security</strong><br>
         Digital Forensic Technologies & Advisory Services<br><br>
         © 2026 AVT Digital Security. All rights reserved.
