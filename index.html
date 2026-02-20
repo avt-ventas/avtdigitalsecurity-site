@@ -389,7 +389,10 @@ footer {
         Discuss your operational requirements with our specialists and explore tailored forensic technology solutions for your institution.
     </p>
     <p>
-        Contact: <a href="mailto:ventas@avtdigitalsecurity.com">ventas@avtdigitalsecurity.com</a>
+        Contact:
+        <span id="email-placeholder">
+            <a href="#" id="reveal-email">Show secure contact address</a>
+        </span>
     </p>
     </div>
 </section>
@@ -406,14 +409,34 @@ footer {
 
 
 <script>
+
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }
+
 document.querySelectorAll('#nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         document.getElementById("nav-menu").classList.remove("active");
     });
 });
+
+
+document.getElementById("reveal-email").addEventListener("click", function(e) {
+
+  e.preventDefault();
+
+  const data = ["dmVudGFz","YXZ0ZGlnaXRhbHNlY3VyaXR5","Y29t"];
+  const email = atob(data[0]) + "@" + atob(data[1]) + "." + atob(data[2]);
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("email-placeholder").innerHTML = "";
+  document.getElementById("email-placeholder").appendChild(link);
+
+});
+    
 </script>    
     
 </body>
