@@ -258,6 +258,65 @@ footer {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+.solution-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.solution-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: -0.4px;
+}
+
+.solution-text p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.solution-text ul {
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+
+.solution-text ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.solution-users {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #5A6A7F;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.solution-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.solution-block.reverse .solution-text {
+    order: 2;
+}
+
+.solution-block.reverse .solution-image {
+    order: 1;
+}
+
+.solution-block + .solution-block {
+    margin-top: 100px;
+    padding-top: 70px;
+    border-top: 1px solid #E6EBF1;
+}
     
 @media (max-width: 900px) {
 
@@ -326,6 +385,12 @@ footer {
     footer {
         padding: 25px 0;
     }
+
+    .solution-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
 }    
 </style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -380,6 +445,49 @@ footer {
     SUPPORTING GOVERNMENT INSTITUTIONS • LAW ENFORCEMENT • JUDICIAL AUTHORITIES • INTERNATIONAL PARTNERS
   </div>
 </section>  
+
+<section class="section" id="solutions">
+<div class="container">
+
+<h2>Digital Forensic Solutions</h2>
+
+<div class="solution-block">
+
+<div class="solution-text">
+
+<h3>Forensic Video Authentication & Enhancement</h3>
+
+<p>
+This solution provides a comprehensive set of forensic analysis tools designed to detect video tampering, validate recording authenticity, enhance image clarity, and identify the originating recording device — supporting experts throughout the evidentiary examination process.
+</p>
+
+<p>
+Developed in collaboration with forensic laboratories and practitioners during real casework, the platform applies a multi-layered methodology to assess video authenticity.
+</p>
+
+<ul>
+<li>Recording device memory examination</li>
+<li>File header and structural consistency analysis</li>
+<li>Intra-frame image integrity assessment</li>
+<li>Inter-frame continuity verification</li>
+<li>Audio-video stream synchronization analysis</li>
+<li>Source device identification</li>
+</ul>
+
+<p class="solution-users">
+LAW ENFORCEMENT • FORENSIC LABORATORIES • JUDICIAL INSTITUTIONS
+</p>
+
+</div>
+
+<div class="solution-image">
+<img src="/assets/img/video-analysis-gui.jpg" alt="Forensic Video Analysis Interface">
+</div>
+
+</div>
+
+</div>
+</section>
     
 <section class="section">
     <div class="container">
