@@ -1,1 +1,443 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVT Digital Security | Tecnologías Forenses Digitales</title>
+<meta name="description" content="Tecnologías avanzadas de análisis forense de audio, video y medios digitales para instituciones gubernamentales y organismos de seguridad en América Latina.">
 
+<link rel="alternate" hreflang="es" href="https://avtdigitalsecurity.com/es/">
+<link rel="alternate" hreflang="en" href="https://avtdigitalsecurity.com/">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="AVT Digital Security">
+<meta property="og:title" content="AVT Digital Security | Tecnologías Forenses Digitales">
+<meta property="og:description" content="Tecnologías avanzadas de análisis forense de audio, video y medios digitales para instituciones gubernamentales y organismos de seguridad en América Latina.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://avtdigitalsecurity.com/">
+    
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+.credibility {
+    background: #E9EEF3;
+    padding: 35px 0;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #3A4A5F;
+    text-align: center;
+    font-weight: 600;
+}
+    
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #1C1C1C;
+    background-color: #F4F6F8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6%;
+}
+
+.hero-accent {
+    width: 70px;
+    height: 2px;
+    background-color: #2F5D8A;
+    margin: 28px 0 32px 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+header {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background-color: rgba(11,31,59,0.95);
+    backdrop-filter: blur(6px);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: #E6EDF5;
+    font-weight: 600;
+    margin-left: 12px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #E6EDF5;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2F5D8A;
+    transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+    outline: 2px solid #2F5D8A;
+    outline-offset: 2px;
+}
+    
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #E6EDF5;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(rgba(11,31,59,0.92), rgba(11,31,59,0.92)),
+                url('background.jpg') center/cover no-repeat;
+    color: white;
+    box-shadow: inset 0 -40px 60px rgba(0,0,0,0.25);
+    padding: 150px 0 130px 0;
+    text-align: left;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 0;
+    max-width: 720px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 640px;
+    line-height: 1.85;
+    opacity: 0.85;
+    margin-bottom: 42px;
+}
+
+.section:nth-of-type(even) {
+    background-color: #FAFBFC;
+}
+
+.section p + p,
+.cta p + p {
+    margin-top: 18px;
+}    
+    
+.section h2,
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+}
+
+.section p,
+.cta p {
+    font-size: 17px;
+    color: #2A2A2A;
+    line-height: 1.8;
+    max-width: 850px;
+}
+
+footer {
+    background-color: #0B1F3B;
+    color: #AEB7C2;
+    padding: 30px 0;
+    font-size: 14px;
+}
+.buttons {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #2F5D8A;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #24496d;
+}
+
+.btn-secondary {
+    border: 1px solid #E6EDF5;
+    color: #E6EDF5;
+    padding: 14px 28px;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.08);
+}
+    
+.section {
+    padding: 90px 0;
+    scroll-margin-top: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #EEF2F6;
+}
+
+.cta {
+    padding: 90px 0;
+    background-color: #F4F6F8;
+}
+
+.cta a {
+    color: #2F5D8A;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cta a:hover {
+    text-decoration: underline;
+}
+    
+.lang-switch {
+    margin-left: 42px;
+    opacity: 0.7;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+    
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 0;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #0B1F3B;
+        position: absolute;
+        top: 72px;
+        left: 6%;
+        right: 6%;
+        padding: 22px;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    }
+    
+    nav a {
+        margin: 12px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        padding: 0 6%;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        opacity: 0.92;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .section,
+    .cta {
+        padding: 60px 0;
+    }
+
+    footer {
+        padding: 25px 0;
+    }
+}    
+</style>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+
+<body>
+
+<header>
+   <div class="container header-inner">
+
+    <a href="/" class="logo">
+      <img src="logo-light.png" alt="AVT Digital Security" height="40">
+      <span class="logo-text">AVT Digital Security</span>
+    </a>
+
+    <nav id="nav-menu">
+      <a href="#">Soluciones</a>
+      <a href="#">Capacitación</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+      <a href="/" class="lang-switch">EN</a>
+    </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+  </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Tecnologías Forenses Digitales de Alta Precisión</h1>
+        <div class="hero-accent"></div>
+        <p>
+          Soluciones avanzadas para la autenticación de audio, análisis de video e investigaciones digitales, complementadas con capacitación profesional y servicios de asesoría especializada para instituciones gubernamentales y organismos de seguridad pública.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="btn-primary">Solicitar Consulta</a>
+          <a href="#" class="btn-secondary">Explorar Soluciones</a>
+        </div>
+        
+    </div>
+</section>
+
+<section class="credibility">
+  <div class="container">
+    APOYANDO A INSTITUCIONES GUBERNAMENTALES • ORGANISMOS DE SEGURIDAD • AUTORIDADES JUDICIALES • SOCIOS INTERNACIONALES
+  </div>
+</section>  
+    
+<section class="section">
+    <div class="container">
+    <h2>Socio Tecnológico Forense de Confianza en LATAM</h2>
+    <p>
+      AVT Digital Security apoya a instituciones gubernamentales y organismos de seguridad en América Latina y mercados internacionales mediante tecnologías forenses avanzadas, capacitación especializada y servicios de asesoría experta.
+    </p>
+    <p>
+      Nuestras soluciones están diseñadas para cumplir con los estándares operativos, metodológicos y judiciales requeridos para garantizar la fiabilidad de la evidencia y la integridad de las investigaciones.
+    </p>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <div class="container">
+    <h2>Solicite una Consulta Técnica</h2>
+    <p>
+      Analice sus requerimientos operativos con nuestros especialistas y conozca soluciones tecnológicas forenses adaptadas a las necesidades de su institución.
+    </p>
+    <p>
+      Contacto:
+      <span id="email-placeholder">
+        <a href="#" id="reveal-email">Mostrar dirección de contacto segura</a>
+      </span>
+    </p>
+    </div>
+</section>
+
+<div style="height:1px; background:#E0E4E8;"></div>
+    
+<footer>
+    <div class="container">
+      <strong style="color:#E6EDF5;">AVT Digital Security</strong><br>
+      Tecnologías Forenses Digitales y Servicios de Asesoría<br><br>
+      © 2026 AVT Digital Security. Todos los derechos reservados.
+    </div>
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+}
+
+document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById("nav-menu").classList.remove("active");
+    });
+});
+
+
+document.getElementById("reveal-email").addEventListener("click", function(e) {
+
+  e.preventDefault();
+
+  const data = ["dmVudGFz","YXZ0ZGlnaXRhbHNlY3VyaXR5","Y29t"];
+  const email = atob(data[0]) + "@" + atob(data[1]) + "." + atob(data[2]);
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("email-placeholder").innerHTML = "";
+  document.getElementById("email-placeholder").appendChild(link);
+
+});
+    
+</script>    
+    
+</body>
+</html>
