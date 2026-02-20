@@ -322,24 +322,26 @@ footer {
     border-top: 1px solid #E6EBF1;
 }
 
-.training-image {
-    margin: 40px 0 10px 0;
-    text-align: center;
+.training-block {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-top: 40px;
 }
 
 .training-image img {
     width: 100%;
-    max-width: 900px;
+    max-width: 420px;
     border-radius: 8px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
 
 .training-caption {
     display: block;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 12px;
     color: #5A6A7F;
-    letter-spacing: 0.5px;
 }
     
 @media (max-width: 900px) {
@@ -413,6 +415,14 @@ footer {
     .solution-block {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .training-block {
+        grid-template-columns: 1fr;
+    }
+
+    .training-image {
+        text-align: center;
     }
 
 }
@@ -708,6 +718,10 @@ LAW ENFORCEMENT • ACCIDENT INVESTIGATION UNITS • FORENSIC EXPERTS • JUDICI
 
 <h2>Professional Training & Methodological Support</h2>
 
+<div class="training-block">
+
+<div class="training-text">
+
 <p>
 All supplied forensic technology platforms are delivered together with professional training programs as an essential part of system implementation. Due to the technical complexity of modern forensic analysis tools, proper methodological application of software functions is critical to ensure evidentiary reliability and the correctness of expert conclusions.
 </p>
@@ -732,14 +746,20 @@ Post-training methodological support is maintained through ongoing expert consul
 ON-SITE TRAINING • ONLINE COURSES • METHODOLOGICAL SUPPORT • POST-DEPLOYMENT CONSULTING
 </p>
 
+</div>
+
 <div class="training-image">
     <img src="/assets/img/training-course.jpg" alt="On-site technical training for forensic specialists">
-    <span class="training-caption">On-site technical training for forensic experts and operational personnel</span>
+    <span class="training-caption">
+        On-site technical training for forensic experts and operational personnel
+    </span>
+</div>
+
 </div>
 
 </div>
 </section>
-    
+
 <section class="section">
     <div class="container">
     <h2>Trusted Forensic Technology Partner in LATAM</h2>
