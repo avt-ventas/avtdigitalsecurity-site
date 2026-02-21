@@ -40,6 +40,10 @@ body {
     background-color: #F4F6F8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -258,6 +262,87 @@ footer {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+.solution-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.solution-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: -0.4px;
+}
+
+.solution-text p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.solution-text ul {
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+
+.solution-text ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.solution-users {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #5A6A7F;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.solution-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.solution-block.reverse .solution-text {
+    order: 2;
+}
+
+.solution-block.reverse .solution-image {
+    order: 1;
+}
+
+.solution-block + .solution-block {
+    margin-top: 100px;
+    padding-top: 70px;
+    border-top: 1px solid #E6EBF1;
+}
+
+.training-block {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.training-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.training-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #5A6A7F;
+}
     
 @media (max-width: 900px) {
 
@@ -326,7 +411,21 @@ footer {
     footer {
         padding: 25px 0;
     }
-}    
+
+    .solution-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .training-block {
+        grid-template-columns: 1fr;
+    }
+
+    .training-image {
+        text-align: center;
+    }
+
+}
 </style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -345,11 +444,11 @@ footer {
     </a>
 
     <nav id="nav-menu">
-      <a href="#">Soluciones</a>
-      <a href="#">Capacitación</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Contacto</a>
-      <a href="/" class="lang-switch">EN</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#training">Training</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="/es/" class="lang-switch">ES</a>
     </nav>
 
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -369,7 +468,7 @@ footer {
 
         <div class="buttons">
           <a href="#contact" class="btn-primary">Solicitar Consulta</a>
-          <a href="#" class="btn-secondary">Explorar Soluciones</a>
+          <a href="#solutions" class="btn-secondary">Explorar Soluciones</a>
         </div>
         
     </div>
@@ -380,31 +479,312 @@ footer {
     APOYANDO A INSTITUCIONES GUBERNAMENTALES • ORGANISMOS DE SEGURIDAD • AUTORIDADES JUDICIALES • SOCIOS INTERNACIONALES
   </div>
 </section>  
-    
-<section class="section">
+
+<section class="section" id="solutions">
     <div class="container">
-    <h2>Socio Tecnológico Forense de Confianza en LATAM</h2>
-    <p>
-      AVT Digital Security apoya a instituciones gubernamentales y organismos de seguridad en América Latina y mercados internacionales mediante tecnologías forenses avanzadas, capacitación especializada y servicios de asesoría experta.
-    </p>
-    <p>
-      Nuestras soluciones están diseñadas para cumplir con los estándares operativos, metodológicos y judiciales requeridos para garantizar la fiabilidad de la evidencia y la integridad de las investigaciones.
-    </p>
+        
+        <h2>Soluciones de Informática y Análisis Forense Digital</h2>
+        <p style="max-width:780px; margin-bottom:50px;">
+            Nuestras plataformas tecnológicas están diseñadas para respaldar el examen pericial y la evaluación técnica de evidencia digital en los ámbitos de audio, video, informática forense y reconstrucción de hechos de tránsito. Cada solución atiende una etapa específica del proceso pericial - desde la verificación de autenticidad e integridad de los registros, el procesamiento técnico de señales y la identificación del dispositivo de origen, hasta la elaboración de informes técnicos sustentados en resultados analíticos - y puede implementarse de manera independiente o como parte de una metodología integral de investigación forense.
+        </p>
+        
+        <div class="solution-block">
+            <div class="solution-text">
+                <h3>Autenticación Forense de Video e Identificación del Dispositivo de Origen</h3>
+                <p>
+                    Cuando las grabaciones de video se presentan como medio de prueba, su integridad debe ser validada técnicamente antes de que puedan sustentar decisiones de carácter investigativo o judicial.
+                </p>
+                
+                <p>
+                    Esta solución proporciona un conjunto integral de herramientas de análisis forense diseñadas para autenticar grabaciones de video, detectar alteraciones en la secuencia de los hechos o en el contenido registrado, e identificar el dispositivo de grabación de origen, respaldando al perito durante todo el proceso de examen de la evidencia.
+                </p>
+                
+                <p>
+                    Desarrollada en colaboración con laboratorios forenses y especialistas en el marco de casos reales, la plataforma aplica una metodología multicapa para la evaluación de la autenticidad del video.
+                </p>
+                
+                <ul>
+                    <li>Examen de la memoria del dispositivo de grabación</li>
+                    <li>Análisis del encabezado y de la consistencia estructural del archivo</li>
+                    <li>Evaluación de la integridad intra-fotograma</li>
+                    <li>Verificación de continuidad inter-fotograma</li>
+                    <li>Análisis de sincronización de flujos audio-video</li>
+                    <li>Identificación del dispositivo de origen</li>
+                </ul>
+                
+                <p class="solution-users">
+                    FUERZAS DEL ORDEN • PERITOS EN VIDEO FORENSE • INSTITUCIONES JUDICIALES
+                </p>
+            </div>
+
+            <div class="solution-image">
+                <img src="/assets/img/video-analysis-gui.jpg" alt="Forensic Video Analysis Interface">
+            </div>
+            
+        </div>
+        
+        <div class="solution-block reverse">
+            <div class="solution-text">
+                <h3>Mejoramiento Forense de Imagen y Video</h3>
+                <p>
+                    Esta solución está diseñada para el examen pericial de imágenes digitales y grabaciones de video, con el objetivo de mejorar la claridad visual y facilitar la identificación de detalles probatorios relevantes relacionados con los hechos registrados en la escena.
+                </p>
+                
+                <p>
+                    Desarrollada en colaboración con especialistas forenses durante investigaciones reales, la plataforma aplica metodologías de mejoramiento tanto tradicionales como avanzadas, preservando en todo momento la integridad probatoria del material analizado.
+                </p>
+                
+                <ul>
+                    <li>Recorte, redimensionamiento y corrección geométrica de imagen</li>
+                    <li>Ajuste de color, brillo y contraste</li>
+                    <li>Reducción de ruido y mejora de nitidez</li>
+                    <li>Incremento de resolución mediante super-resolución basada en redes neuronales</li>
+                    <li>Reducción de desenfoque por movimiento utilizando uno o varios fotogramas</li>
+                    <li>Estabilización de video</li>
+                    <li>Flujo de procesamiento controlado por etapas</li>
+                    <li>Generación automática de informe técnico de procesamiento</li>
+                </ul>
+                
+                <p class="solution-users">
+                    FUERZAS DEL ORDEN • LABORATORIOS FORENSES • INSTITUCIONES JUDICIALES
+                </p>
+            
+            </div>
+
+            <div class="solution-image">
+                <img src="/assets/img/image-enhancement-gui.jpg" alt="Forensic Image and Video Enhancement Interface">
+            </div>
+        </div>
+        
+        <div class="solution-block">
+            <div class="solution-text">
+                <h3>Autenticación Forense de Audio e Identificación del Locutor</h3>
+                
+                <p>
+                    Esta solución proporciona a los peritos en audio forense herramientas avanzadas para la autenticación de evidencia sonora, el mejoramiento de la inteligibilidad del habla, la segmentación estructurada de conversaciones y la identificación forense del locutor, respaldando una interpretación técnica confiable de las grabaciones utilizadas en investigaciones.
+                </p>
+                
+                <p>
+                    Desarrollada en colaboración con especialistas en audio forense durante el análisis de casos reales, la plataforma cubre el flujo completo del examen pericial de grabaciones de voz:
+                </p>
+                
+                <ul>
+                    <li>Mejoramiento y procesamiento de la señal de voz</li>
+                    <li>Segmentación de conversaciones con decodificación de texto</li>
+                    <li>Análisis auditivo y lingüístico</li>
+                    <li>Evaluación de patrones prosódicos</li>
+                    <li>Perfilado espectral y fonético del locutor</li>
+                    <li>Análisis estadístico de tono fundamental y formantes</li>
+                </ul>
+                
+                <p class="solution-users">
+                    PERITOS EN AUDIO FORENSE • FUERZAS DEL ORDEN • INSTITUCIONES JUDICIALES
+                </p>
+            
+            </div>
+
+            <div class="solution-image">
+                <img src="/assets/img/audio-analysis-gui.jpg" alt="Forensic Audio Analysis Interface">
+            </div>
+        
+        </div>
+        
+        <div class="solution-block reverse">
+            <div class="solution-text">
+                <h3>Análisis Forense de Audio Asistido por Inteligencia Artificial y Evaluación de Autenticidad</h3>
+                
+                <p>
+                    Esta solución respalda a los peritos en audio forense mediante la automatización de tareas analíticas complejas y de alta carga operativa, utilizando algoritmos avanzados de inteligencia artificial y procesamiento digital de señales, lo que permite la segmentación eficiente de locutores, la decodificación del habla y la identificación del locutor independiente del contenido textual.
+                </p>
+                
+                <p>
+                    Además de la comparación de identidad, la plataforma incorpora herramientas automatizadas para el perfilado del locutor y la evaluación de autenticidad de grabaciones digitales, incluyendo la detección de regrabaciones por canal analógico y de voces sintéticas generadas mediante tecnologías de clonación de voz o deepfake.
+                </p>
+                
+                <ul>
+                    <li>Segmentación y etiquetado automático de locutores</li>
+                    <li>Identificación del locutor independiente del texto</li>
+                    <li>Perfilado del locutor (estimación de edad y género)</li>
+                    <li>Detección de regrabaciones por canal analógico</li>
+                    <li>Detección de voz sintética y deepfakes</li>
+                    <li>Análisis estadístico mediante Razón de Verosimilitud (LR / LLR)</li>
+                </ul>
+                
+                <p>
+                    La generación de gráficos de Función de Densidad de Probabilidad (PDF) y curvas de Falsas Aceptaciones (FA) y Falsos Rechazos (FR) facilita la interpretación pericial del grado de similitud, los umbrales de decisión y la fuerza probatoria en apoyo de las hipótesis analizadas.
+                </p>
+                
+                <p class="solution-users">
+                    PERITOS EN AUDIO FORENSE • FUERZAS DEL ORDEN • INSTITUCIONES JUDICIALES
+                </p>
+            
+            </div>
+
+            <div class="solution-image">
+                <img src="/assets/img/ai-audio-analysis-gui.jpg" alt="AI Forensic Audio Analysis Interface">
+            </div>
+        
+        </div>
+        
+        <div class="solution-block">
+            <div class="solution-text">
+                <h3>Análisis Forense de la Estructura de Archivos Multimedia e Identificación del Dispositivo</h3>
+                
+                <p>
+                    Esta solución proporciona herramientas especializadas para el examen pericial de archivos multimedia de audio y video en el marco de investigaciones de informática forense y análisis técnico-digital, permitiendo detectar indicios de modificación o edición en la estructura del archivo y en sus metadatos.
+                </p>
+                
+                <p>
+                    Desarrollada en colaboración con peritos en ejercicio, la plataforma aplica múltiples enfoques analíticos para verificar la autenticidad de la grabación e identificar el dispositivo de origen.
+                </p>
+                
+                <ul>
+                    <li>Examen del sistema de almacenamiento del dispositivo de grabación</li>
+                    <li>Análisis del encabezado del archivo y de su integridad estructural</li>
+                    <li>Mapeo de asignación de fotogramas</li>
+                    <li>Análisis de sincronización de flujos múltiples</li>
+                    <li>Extracción de características técnicas identificativas del dispositivo</li>
+                    <li>Identificación del dispositivo de grabación de origen</li>
+                </ul>
+                
+                <p class="solution-users">
+                    FUERZAS DEL ORDEN • PERITOS EN INFORMÁTICA FORENSE • INSTITUCIONES JUDICIALES
+                </p>
+            
+            </div>
+            <div class="solution-image">
+                <img src="/assets/img/hex-analysis-gui.jpg" alt="Forensic Media File Structure Analysis Interface">
+            </div>
+        
+        </div>
+        
+        <div class="solution-block reverse">
+            <div class="solution-text">
+                <h3>Forensic Video-Based Scene Reconstruction & Motion Analysis</h3>
+                
+                <p>
+                    This solution is designed to support forensic investigation of incidents captured on video recordings, including traffic accidents and other events requiring spatial and temporal reconstruction of the scene.
+                </p>
+                
+                <p>
+                    Using geometric modeling and motion analysis techniques, the platform enables experts to establish critical evidentiary parameters such as distance, time intervals, and object speed directly from video evidence.
+                </p>
+                
+                <ul>
+                    <li>Multi-format video evidence playback</li>
+                    <li>Optical distortion compensation</li>
+                    <li>Distance and spatial measurement</li>
+                    <li>Trajectory reconstruction of moving objects</li>
+                    <li>Object speed calculation</li>
+                    <li>3D modeling of the recorded scene</li>
+                </ul>
+                
+                <p class="solution-users">
+                    LAW ENFORCEMENT • ACCIDENT INVESTIGATION UNITS • FORENSIC EXPERTS • JUDICIAL INSTITUTIONS
+                </p>
+            
+            </div>
+            
+            <div class="solution-image">
+                <img src="/assets/img/transport-forensics-gui.jpg" alt="Forensic Scene Reconstruction Interface">
+            </div>
+        </div>  
     </div>
 </section>
 
+<section class="section" id="training">
+    <div class="container">
+        <h2>Capacitación Profesional y Acompañamiento Metodológico</h2>
+        
+        <div class="training-block">
+            <div class="training-text">
+                
+                <p>
+                    Todas las plataformas tecnológicas forenses suministradas se entregan acompañadas de programas de capacitación profesional como parte esencial del proceso de implementación del sistema. Debido a la complejidad técnica de las herramientas modernas de análisis forense, la correcta aplicación metodológica de las funcionalidades del software es fundamental para garantizar la confiabilidad probatoria y la validez de las conclusiones periciales.
+                </p>
+                
+                <p>
+                    Nuestro objetivo principal no es únicamente proporcionar instrumentos analíticos, sino asegurar su uso competente, consistente y metodológicamente adecuado dentro de los flujos reales de trabajo investigativo. Por esta razón, la capacitación se considera un componente obligatorio asociado a la implementación de cada solución.
+                </p>
+                
+                <p>
+                    Los programas de capacitación se imparten tradicionalmente de manera presencial en las instalaciones del cliente, permitiendo la interacción directa con el personal operativo y el entorno de laboratorio. A partir de la pandemia de COVID-19, también se incorporaron modalidades de formación en línea cuando las circunstancias lo requieren, aunque la capacitación presencial continúa siendo el formato recomendado para una transferencia óptima de conocimientos.
+                </p>
+                
+                <p>
+                    Nuestros instructores certificados han impartido más de 100 cursos especializados a nivel internacional dirigidos a peritos forenses, fuerzas del orden e instituciones judiciales.
+                </p>
+                
+                <p>
+                    El acompañamiento metodológico posterior a la capacitación se mantiene mediante asesoría técnica continua. Nuestros especialistas permanecen en contacto con el personal capacitado y brindan apoyo consultivo respecto a la aplicación práctica de los métodos analíticos que puedan surgir durante el trabajo en casos reales.
+                </p>
+                
+                <p style="font-weight:600; letter-spacing:0.5px; margin-top:20px;">
+                    CAPACITACIÓN PRESENCIAL • CURSOS EN LÍNEA • ACOMPAÑAMIENTO METODOLÓGICO • ASESORÍA POST-IMPLEMENTACIÓN
+                </p>
+            
+            </div>
+            
+            <div class="training-image">
+                <img src="/assets/img/training-course.jpg" alt="Capacitación técnica presencial para especialistas forenses">
+                <span class="training-caption">
+                    Capacitación técnica presencial para peritos forenses y personal operativo
+                </span>
+            </div>
+        
+        </div>
+    
+    </div>
+</section> 
+    
+<section class="section">
+    <div class="container">
+        <h2>Socio Tecnológico Forense de Confianza en LATAM</h2>
+        
+        <p>
+            AVT Digital Security apoya a instituciones gubernamentales y organismos de seguridad en América Latina y mercados internacionales mediante tecnologías forenses avanzadas, capacitación especializada y servicios de asesoría experta.
+        </p>
+        
+        <p>
+            Nuestras soluciones están diseñadas para cumplir con los estándares operativos, metodológicos y judiciales requeridos para garantizar la fiabilidad de la evidencia y la integridad de las investigaciones.
+        </p>
+    
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <h2>Sobre AVT Digital Security</h2>
+        
+        <p>
+            AVT Digital Security es un proveedor tecnológico especializado en soluciones de análisis forense digital y servicios de asesoría técnica dirigidos a instituciones gubernamentales, fuerzas del orden y laboratorios forenses en América Latina y otros mercados internacionales.
+        </p>
+        
+        <p>
+            La empresa fue establecida en la Ciudad de México en 2022 con el propósito de impulsar la implementación regional de tecnologías forenses avanzadas y proporcionar soporte técnico especializado en el ámbito del examen de evidencia digital.
+        </p>
+        
+        <p>
+            Nuestras soluciones se desarrollan en colaboración con peritos y especialistas forenses, y están orientadas a respaldar procesos de examen probatorio conforme a los requerimientos operativos y judiciales relacionados con la confiabilidad e integridad de la evidencia digital.
+        </p>
+    
+    </div>
+</section>
+    
 <section class="cta" id="contact">
     <div class="container">
-    <h2>Solicite una Consulta Técnica</h2>
-    <p>
-      Analice sus requerimientos operativos con nuestros especialistas y conozca soluciones tecnológicas forenses adaptadas a las necesidades de su institución.
-    </p>
-    <p>
-      Contacto:
-      <span id="email-placeholder">
-        <a href="#" id="reveal-email">Mostrar dirección de contacto segura</a>
-      </span>
-    </p>
+        <h2>Solicite una Consulta Técnica</h2>
+        
+        <p>
+            Analice sus requerimientos operativos con nuestros especialistas y conozca soluciones tecnológicas forenses adaptadas a las necesidades de su institución.
+        </p>
+        
+        <p>
+            Contacto:
+            <span id="email-placeholder">
+                <a href="#" id="reveal-email">Mostrar dirección de contacto segura</a>
+            </span>
+        </p>
     </div>
 </section>
 
